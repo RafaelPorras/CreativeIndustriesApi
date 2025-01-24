@@ -13,6 +13,10 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/creativeIndustries', 'CreativeIndustryController@index');
+$router->post('/creativeIndustries', 'CreativeIndustryController@store');
+$router->get('/creativeIndustries/{creativeIndustry}', 'CreativeIndustryController@show');
+$router->put('/creativeIndustries/{creativeIndustry}', 'CreativeIndustryController@update');
+$router->patch('/creativeIndustries/{creativeIndustry}', 'CreativeIndustryController@update');
+$router->delete('/creativeIndustries/{creativeIndustry}', 'CreativeIndustryController@destroy');
+
